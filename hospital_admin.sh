@@ -37,4 +37,5 @@ secure_data() {
     chmod 700 active_logs
     echo "Permissions updated. Current permissions:"
     ls -ld active_logs
+    echo "active_logs is now secured (owner-only access)."
 }
