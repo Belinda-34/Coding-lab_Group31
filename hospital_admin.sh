@@ -26,6 +26,8 @@ initialize_system() {
 	echo "system directories initailized successfully"
 }
 
+# Author: brukundo-crypto (Member 2 - Security Lead)
+# Purpose: Enforce owner-only access on the active_logs directory.
 # This function secures the active_logs directory
 # Only the owner should be able to read and write.
 # active_logs is a directory, so the owner also needs execute (x) to enter it.
