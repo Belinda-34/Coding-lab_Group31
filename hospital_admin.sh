@@ -25,3 +25,14 @@ initialize_system() {
 	
 	echo "system directories initailized successfully"
 }
+
+# This function secures the active_logs directory
+# Only the owner should be able to read and write.
+# active_logs is a directory, so the owner also needs execute (x) to enter it.
+# 700 = owner rwx, group nothing, others nothing.
+secure_data() {
+    echo "Securing active_logs directory..."
+    chmod 700 active_logs
+    echo "Permissions updated. Current permissions:"
+    ls -ld active_logs
+}
