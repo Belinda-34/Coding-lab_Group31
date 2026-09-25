@@ -1,5 +1,5 @@
 #!/bin/bash
-#This file created directories needed by the knh monitoring system
+#This function creates knh directories 
 initialize_system() {
 	if [ ! -d "active_logs" ]; then
 		echo "Creating active_logs directory.."
@@ -21,5 +21,7 @@ initialize_system() {
 		mkdir reports
 	else 
 		echo "reports directory already exists."
-	fi 
+	fi
+	
+	echo "system directories initailized successfully"
 }
