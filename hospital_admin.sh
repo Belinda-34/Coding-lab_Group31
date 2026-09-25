@@ -39,3 +39,6 @@ secure_data() {
     ls -ld active_logs
     echo "active_logs is now secured (owner-only access)."
 }
+
+initialize_system
+secure_data
