@@ -40,6 +40,9 @@ secure_data() {
     echo "active_logs is now secured (owner-only access)."
 }
 
+# Author: yshamis44 (Member 3 - Orchestrator)
+# Purpose: Run the setup functions in order and confirm completion.
+# initialize_system creates the directories, then secure_data locks down active_logs.
 initialize_system
 secure_data
 
