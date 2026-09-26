@@ -12,24 +12,29 @@
 water_audit() {
     local water_file="active_logs/water_usage_log.log"
 
-    echo "Analyzing ICU water usage..."
+echo "======================================"
+echo "      ICU WATER USAGE AUDIT"
+echo "======================================"
 
     if [ ! -f "$water_file" ]; then
         echo "Error: $water_file does not exist."
         return 1
     fi
 
-    awk -F'|' '
+        awk -F'|' '
     $2 ~ /ICU_WATER_RESERVE/ {
         gsub(/^[ \t]+|[ \t]+$/, "", $3)
         sum += $3
         count++
     }
     END {
-    if (count > 0) {
-        printf "ICU Water Reserve Average Usage: %.2f Liters/min\n", sum / count
-        printf "Records analyzed: %d\n", count
-    }
-    else
-        print "No ICU_WATER_RESERVE data found."
-}' "$water_file"
+        if (count > 0) {
+            printf "ICU Water Reserve Average Usage: %.2f Liters/min\n", sum / count
+            printf "Records analyzed: %d\n", count
+        }
+        else
+            print "No ICU_WATER_RESERVE data found."
+    }' "$water_file"
+
+    echo "======================================"
+}
