@@ -15,7 +15,7 @@ water_audit() {
     echo "Analyzing ICU water usage..."
 
     if [ ! -f "$water_file" ]; then
-        echo "Water usage log not found."
+        echo "Error: $water_file does not exist."
         return 1
     fi
 
@@ -26,9 +26,10 @@ water_audit() {
         count++
     }
     END {
-        if (count > 0)
-            printf "ICU Water Reserve Average Usage: %.2f Liters/min\n", sum / count
-        else
-            print "No ICU_WATER_RESERVE data found."
-    }' "$water_file"
-}
+    if (count > 0) {
+        printf "ICU Water Reserve Average Usage: %.2f Liters/min\n", sum / count
+        printf "Records analyzed: %d\n", count
+    }
+    else
+        print "No ICU_WATER_RESERVE data found."
+}' "$water_file"
