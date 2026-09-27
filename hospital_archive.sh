@@ -8,6 +8,12 @@
 ACTIVE_DIR="active_logs"
 ARCHIVE_DIR="archived_logs"
 
+# Check that required directories exist
+if [ ! -d "$ACTIVE_DIR" ] || [ ! -d "$ARCHIVE_DIR" ]; then
+    echo "Error: Required log directories do not exist."
+    exit 1
+fi
+
 # Create a timestamp in YYYYMMDD_HHMM format
 TIMESTAMP=$(date +"%Y%m%d_%H%M")
 
