@@ -27,12 +27,12 @@ The project uses Shell scripts to set up the hospital environment, secure sensit
 
 | Member   | Role             | Responsibility                                                 |
 | -------- | ---------------- | -------------------------------------------------------------- |
-| Member 1 | Architect        | Developed the `initialize_system()` function                   |
-| Member 2 | Security Lead    | Developed the `secure_data()` function and handled permissions |
-| Member 3 | Orchestrator     | Implemented the execution logic for `hospital_admin.sh`        |
-| Member 4 | Archivist        | Developed `hospital_archive.sh`                                |
-| Member 5 | Clinical Analyst | Developed `process_vitals()` for critical alerts               |
-| Member 6 | Facility Auditor | Developed `water_audit()` for water usage analysis             |
+| Belinda  | Architect        | Developed the `initialize_system()` function                   |
+| Brasen   | Security Lead    | Developed the `secure_data()` function and handled permissions |
+| Yanice   | Orchestrator     | Implemented the execution logic for `hospital_admin.sh`        |
+| Rurenzi  | Archivist        | Developed `hospital_archive.sh`                                |
+| Dickson  | Clinical Analyst | Developed `process_vitals()` for critical alerts               |
+| Aldo     | Facility Auditor | Developed `water_audit()` for water usage analysis             |
 
 ## How to Run the Project
 
